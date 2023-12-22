@@ -31,7 +31,8 @@ export const Header = () => {
 */
   return (
     <>
-      <Nav style={{ backgroundColor: "#0039a6" }}>
+      <Nav style={{ backgroundColor: "#1DDAB8" }}>
+        
         <Container className="flex justify-end gap-3 align-middle h-8">
           <NavLink className="text-white font-semibold">
             <Link to={"/certs"}>Verificar Certificado</Link>
@@ -47,7 +48,7 @@ export const Header = () => {
       </Nav>
       <Navbar expand={expand} className="shadow-md">
         <Container>
-          <img className="h-10 mx-2" src="src\assets\IMG\ecomas.png"></img>
+          <img className="h-10 mx-2" src="src\assets\IMG\binex-h.png"></img>
           <Navbar.Toggle aria-controls={`offcanvasNavbar-expand-${expand}`} />
           <Navbar.Offcanvas
             id={`offcanvasNavbar-expand-${expand}`}

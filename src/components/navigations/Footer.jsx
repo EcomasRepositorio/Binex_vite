@@ -9,7 +9,7 @@ const Footer = () => {
         <div className="row text-secondary mt-2">
           <div className="col-sm">
             <p>
-              <span className="text-center">ECOMÁS</span> con una trayectoria de
+              <span className="text-center">BINEX</span> con una trayectoria de
               04 años, se ha destacado como una institución comprometida con la
               formación y el desarrollo de profesionales en diversos campos. A
               lo largo de este tiempo, hemos brindado cursos y diplomados de
@@ -34,7 +34,7 @@ const Footer = () => {
           <div className="col-sm">
             <h5 className="font-bold">Nosotros</h5>
             <ul>
-              <li>Sobre ECOMÁS</li>
+              <li>Sobre BINEX</li>
               <li>Historia</li>
               <li>Valores</li>
               <li>Funciones</li>
@@ -50,7 +50,7 @@ const Footer = () => {
               <li>Diplomados</li>
               <li>Másteres</li>
               <li>Bolsa de Trabajo</li>
-              <li>Idiomas ECOMÁS</li>
+              <li>Idiomas BINEX</li>
               <li>Segunda carrera</li>
             </ul>
           </div>
@@ -79,7 +79,7 @@ const Footer = () => {
             </ul>
           </div>
           <div className="col-sm">
-            <h5 className="font-bold">ECOMÁS para empresas</h5>
+            <h5 className="font-bold">BINEX para empresas</h5>
             <ul>
               <li>Asesoría y Consultoría</li>
               <li>Fabricación y Ensayos</li>
@@ -104,7 +104,7 @@ const Footer = () => {
               <li>Informes y admisión</li>
               <li>Línea gratuita a nivel nacional</li>
               <li>0800-74577 (01)7160250</li>
-              <li>contacto@ecomas.edu.pe</li>
+              <li>contacto@binex.edu.pe</li>
             </ul>
           </div>
         </div>
@@ -113,7 +113,7 @@ const Footer = () => {
       <div className="m-3 py-4 border-top border-secondary">
         <div className="container text-center">
           <p className="text-secondary mb-0 py-2">
-            © 2023 Ecomás All rights reserved.
+            © 2023 Binex All rights reserved.
           </p>
         </div>
       </div>

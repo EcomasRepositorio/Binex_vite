@@ -13,13 +13,10 @@ const HomeContend = () => {
     <>
       <Carousel className="animate__animated animate__backInLeft">
         <Carousel.Item>
-          <img src="src\assets\IMG\Banner-Web-001.png" />
+          <img src="src\assets\IMG\bannerBinex2.png" />
         </Carousel.Item>
         <Carousel.Item>
-          <img src="src\assets\IMG\Banner-Web-002.png" />
-        </Carousel.Item>
-        <Carousel.Item>
-          <img src="src\assets\IMG\Banner-Web-003.png" />
+          <img src="src\assets\IMG\bannerBinex.png" />
         </Carousel.Item>
       </Carousel>
 
@@ -31,7 +28,7 @@ const HomeContend = () => {
                 style={{ color: "#05be50" }}
                 className="animate__animated animate__backInDown font-bold text-6xl"
               >
-                ¿Porque estudiar en Ecomás?
+                ¿Porque estudiar Binex?
               </p>
             </Card.Title>
             <Card.Text>
@@ -39,14 +36,14 @@ const HomeContend = () => {
                 style={{ color: "#0039a6" }}
                 className="animate__animated animate__backInLeft text-2xl"
               >
-                ¡En ECOMÁS, formación de calidad con respaldo universitario y
+                ¡En Binex, formación de calidad con respaldo universitario y
                 reconocimiento profesional!.
               </p>
             </Card.Text>
           </Card.Body>
         </Card>
         <Figure className="flex justify-center align-middle">
-          <Figure.Image className="animate__animated animate__backInLeft" src="src\assets\IMG\img_uno.png"/>
+          <Figure.Image className="animate__animated animate__backInLeft" src="src\assets\IMG\image2.jpg"/>
         </Figure>
       </Container>
 
