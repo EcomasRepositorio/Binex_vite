@@ -31,7 +31,7 @@ export const Header = () => {
 */
   return (
     <>
-      <Nav style={{ backgroundColor: "#1DDAB8" }}>
+      <Nav style={{ backgroundImage: "linear-gradient(to right, #1DDAB8, #2878B7)" }}>
         
         <Container className="flex justify-end gap-3 align-middle h-8">
           <NavLink className="text-white font-semibold">

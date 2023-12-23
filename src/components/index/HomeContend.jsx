@@ -28,7 +28,7 @@ const HomeContend = () => {
                 style={{ color: "#05be50" }}
                 className="animate__animated animate__backInDown font-bold text-6xl"
               >
-                ¿Porque estudiar Binex?
+                ¿Porque estudiar en Binex?
               </p>
             </Card.Title>
             <Card.Text>
@@ -36,8 +36,8 @@ const HomeContend = () => {
                 style={{ color: "#0039a6" }}
                 className="animate__animated animate__backInLeft text-2xl"
               >
-                ¡En Binex, formación de calidad con respaldo universitario y
-                reconocimiento profesional!.
+                ¡Optar por Binex implica acceder a una formación de alta calidad respaldada
+                 por instituciones académicas y reconocimiento profesional!
               </p>
             </Card.Text>
           </Card.Body>
@@ -47,7 +47,7 @@ const HomeContend = () => {
         </Figure>
       </Container>
 
-      <div style={{ backgroundColor: "#0039a6" }} className="p-5">
+      <div style={{  backgroundImage: "linear-gradient(to right, #1DDAB8, #2878B7)" }} className="p-5">
       <Container className="my-3 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-5 justify-items-center text-center">
         <Card className="animate-slide-in-left min-w-[250px] p-2 rounded-3xl w-7/12 shadow-2xl hover:-translate-y-12 transition delay-150 duration-300">
           <img className="h-20" src="src\assets\SVG\mortarboard-fill.svg" />
