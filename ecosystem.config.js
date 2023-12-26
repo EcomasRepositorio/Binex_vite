@@ -1,8 +1,8 @@
 module.exports = {
     apps: [
       {
-        name: 'binexTesting',
-        script: 'npm',
+        name: 'binex-pm2',
+        script: '/home/binex/Binex_vite/src/App.js',
         args: 'run dev',
         watch: true,
         ignore_watch: ['node_modules', 'dist'], // Ignora la carpeta node_modules y dist
