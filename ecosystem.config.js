@@ -1,7 +1,7 @@
 module.exports = {
     apps: [
       {
-        name: 'binex-pm2',
+        name: 'binex-pm3',
         script: 'npm',
         args: 'run dev',
         watch: true,
