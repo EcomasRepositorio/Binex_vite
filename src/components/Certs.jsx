@@ -158,29 +158,16 @@ const Certs = () => {
       <Header />
       <Container>
         <div className="flex flex-wrap justify-center items-center ">
+          
           <img
-            className="h-40 p-2 sm:flex"
-            src="src\assets\IMG\colegio_abogados.png"
-            alt="Colegio de Abogados"
-          ></img>
-          <img
-            className="h-40 p-2 sm:flex "
-            src="src\assets\IMG\Ecomas_horizontal.png"
-            alt="Ecomas Horizontal"
-          ></img>
-          <img
-            className="h-40 p-2 sm:flex"
+            className="h-60 p-2 sm:flex"
             src="src\assets\IMG\UNP.png"
             alt="UNP"
           ></img>
-          <img
-            className="h-40 p-2 sm:flex"
-            src="src\assets\IMG\CIP.png"
-            alt="CIP"
-          ></img>
+          
         </div>
       </Container>
-      <div className="page-content bg-white ">
+      <div className="page-content bg-white border-t border-gray-200 ">
         <div className="m-5"></div>
         <div className="container section-area section-sp2">
           <div className="parent_search_certificate text-center mt-5 mb-5">
@@ -188,7 +175,7 @@ const Certs = () => {
               <h1 className="display-4 title-head">Certificados</h1>
               <p className="lead">
                 En este módulo podrá realizar la búsqueda de certificados de los
-                diferentes eventos ofrecidos por ECOMÁS
+                diferentes eventos ofrecidos por BINEX.
               </p>
               <h3 className="mt-4">Buscar por:</h3>
             </div>

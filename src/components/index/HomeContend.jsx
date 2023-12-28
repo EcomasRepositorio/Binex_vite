@@ -43,11 +43,11 @@ const HomeContend = () => {
           </Card.Body>
         </Card>
         <Figure className="flex justify-center align-middle">
-          <Figure.Image className="animate__animated animate__backInLeft" src="src\assets\IMG\image2.jpg"/>
+          <Figure.Image className="animate__animated animate__backInLeft" src="src\assets\IMG\image3.png"/>
         </Figure>
       </Container>
 
-      <div style={{  backgroundImage: "linear-gradient(to right, #1DDAB8, #2878B7)" }} className="p-5">
+      <div style={{  backgroundImage: "linear-gradient(to right, #2878B7, #1DDAB8)" }} className="p-5">
       <Container className="my-3 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-5 justify-items-center text-center">
         <Card className="animate-slide-in-left min-w-[250px] p-2 rounded-3xl w-7/12 shadow-2xl hover:-translate-y-12 transition delay-150 duration-300">
           <img className="h-20" src="src\assets\SVG\mortarboard-fill.svg" />

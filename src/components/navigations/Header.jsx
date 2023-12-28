@@ -31,7 +31,7 @@ export const Header = () => {
 */
   return (
     <>
-      <Nav style={{ backgroundImage: "linear-gradient(to right, #1DDAB8, #2878B7)" }}>
+      <Nav style={{ backgroundImage: "linear-gradient(to right, #2878B7, #1DDAB8)" }}>
         
         <Container className="flex justify-end gap-3 align-middle h-8">
           <NavLink className="text-white font-semibold">
@@ -86,13 +86,13 @@ export const Header = () => {
               </Nav>
               <Nav className="flex justify-center align-middle">
                 <div className="flex justify-start align-middle gap-4  mx-2">
-                  <Link target="_blank" to={"https://www.facebook.com/ecomascyc/?locale=es_LA"} className="flex aling-middle justify-center">
+                  <Link target="_blank" to={"https://www.facebook.com/BinexEdu"} className="flex aling-middle justify-center">
                     <img src="src\assets\SVG\facebook.svg"></img>
                   </Link>
-                  <Link target="_blank" to={"https://www.instagram.com/ecomas_cyc/"} className="flex aling-middle justify-center">
+                  <Link target="_blank" to={"https://www.instagram.com/binex.ec/"} className="flex aling-middle justify-center">
                     <img src="src\assets\SVG\instagram.svg"></img>
                   </Link>
-                  <NavLink target="_black" to={"https://www.tiktok.com/@ecomascyc"} className="flex aling-middle justify-center">
+                  <NavLink target="_black" to={"https://www.tiktok.com/@binex.ec/"} className="flex aling-middle justify-center">
                     <img src="src\assets\SVG\tiktok.svg"></img>
                   </NavLink>
                 </div>
