@@ -59,7 +59,7 @@ const Footer = () => {
           </div>
 
           <div className="col-sm"><br></br>
-            <h5 className="font-sans text-2xl font-bold mb-4">Síguenos en</h5>
+            <h5 className="font-sans text-2xl font-bold mb-4">Síguenos en :</h5>
             <div className="flex items-center">
           <a href="https://www.facebook.com/BinexEdu" target="_blank" rel="noopener noreferrer">
            <img src="src\assets\SVG\faceColor.svg" alt="Facebook" className="w-10 h-10 mr-6" />
