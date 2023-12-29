@@ -42,7 +42,7 @@ export const StudentForm = ({ student, onSave, onCancel }) => {
     }
 
     try {
-      const response = await fetch('https://ecomas.pe:4000/server/students/save', {
+      const response = await fetch('https://binex.edu.pe:3000/server/students/save', {
         method: 'POST',
         body: formData,
       });
