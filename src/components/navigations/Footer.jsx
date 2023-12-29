@@ -93,7 +93,7 @@ const Footer = () => {
                 className="inline-block hover:scale-110 transition-transform duration-300 ease-in-out"
               >
                 <img
-                  src="src\assets\SVG\Icono_Tiktok.svg"
+                  src="src\assets\SVG\tiktokblack.svg"
                   alt="Tiktok"
                   className="w-10 h-10 mr-6"
                 />
