@@ -74,7 +74,7 @@ const Footer = () => {
               </a>
 
               <a
-                href="https://www.facebook.com/BinexEdu"
+                href="https://www.instagram.com/binex.ec/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-block hover:scale-110 transition-transform duration-300 ease-in-out"
@@ -87,7 +87,7 @@ const Footer = () => {
               </a>
 
               <a
-                href="https://www.facebook.com/BinexEdu"
+                href="https://www.tiktok.com/@binex.ec/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-block hover:scale-110 transition-transform duration-300 ease-in-out"
