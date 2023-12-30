@@ -27,8 +27,6 @@ const Footer = () => {
               <li>Publicaciones</li>
               <li>Galería de titulación</li>
             </ul>
-
-           
           </div>
 
           <div className="col-sm">
@@ -58,21 +56,49 @@ const Footer = () => {
             </ul>
           </div>
 
-          <div className="col-sm"><br></br>
+          <div className="col-sm">
+            <br />
             <h5 className="font-sans text-2xl font-bold mb-4">Síguenos en :</h5>
             <div className="flex items-center">
-          <a href="https://www.facebook.com/BinexEdu" target="_blank" rel="noopener noreferrer">
-           <img src="src\assets\SVG\faceColor.svg" alt="Facebook" className="w-10 h-10 mr-6" />
-          </a>
-          <a href="https://www.instagram.com/binex.ec/" target="_blank" rel="noopener noreferrer">
-           <img src="src\assets\SVG\instaColor2.svg" alt="Instagram" className="w-10 h-10 mr-6" />
-          </a>
-          <a href="https://www.tiktok.com/@binex.ec/video/7287257960374488325" target="_blank" rel="noopener noreferrer">
-               <img src="src\assets\SVG\tikColor.svg" alt="Tiktok" className="w-10 h-10 mr-6" />
-           </a>
-  
-          </div>
+              <a
+                href="https://www.facebook.com/BinexEdu"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-block hover:scale-110 transition-transform duration-300 ease-in-out"
+              >
+                <img
+                  src="src\assets\SVG\Icono_Facebook.svg"
+                  alt="Facebook"
+                  className="w-10 h-10 mr-6"
+                />
+              </a>
 
+              <a
+                href="https://www.instagram.com/binex.ec/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-block hover:scale-110 transition-transform duration-300 ease-in-out"
+              >
+                <img
+                  src="src\assets\SVG\Icono_Instagram.svg"
+                  alt="Instagram"
+                  className="w-10 h-10 mr-6"
+                />
+              </a>
+
+              <a
+                href="https://www.tiktok.com/@binex.ec/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-block hover:scale-110 transition-transform duration-300 ease-in-out"
+              >
+                <img
+                  src="src\assets\SVG\tiktokblack.svg"
+                  alt="Tiktok"
+                  className="w-10 h-10 mr-6"
+                />
+              </a>
+            </div>
           </div>
         </div>
 

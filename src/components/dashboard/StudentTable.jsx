@@ -7,7 +7,11 @@ export const StudentTable = ({ students, onDelete, onEdit }) => {
 
   const viewPDF = (pdfFileName) => {
     if (pdfFileName) {
+<<<<<<< HEAD
       const pdfURL = `https://binex.edu.pe:5000/server/pdf/${pdfFileName}`;
+=======
+      const pdfURL = `https://binex.edu.pe:3000/server/pdf/${pdfFileName}`;
+>>>>>>> 2a98695d84f433837875b64dc63587bd4b4bc759
       window.open(pdfURL, '_blank');
     }
   };
