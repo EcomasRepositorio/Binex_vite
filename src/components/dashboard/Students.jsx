@@ -46,7 +46,11 @@ export const Students = () => {
   useEffect(() => {
     setIsLoading(true);
 
+<<<<<<< HEAD
+    fetch("https://binex.edu.pe:5000/server/students")
+=======
     fetch("https://binex.edu.pe:3000/server/students")
+>>>>>>> 2a98695d84f433837875b64dc63587bd4b4bc759
       .then((response) => response.json())
       .then((data) => {
         setData(data.results);
@@ -81,7 +85,11 @@ export const Students = () => {
   const handleAddStudent = (newStudentData) => {
     if (selectedStudent && selectedStudent.id_estudiante) {
       handleHttpAction(
+<<<<<<< HEAD
+        `https://binex.edu.pe:5000/server/students/update/${selectedStudent.id_estudiante}`,
+=======
         `https://binex.edu.pe:3000/server/students/update/${selectedStudent.id_estudiante}`,
+>>>>>>> 2a98695d84f433837875b64dc63587bd4b4bc759
         "PUT",
         newStudentData
       );
@@ -89,7 +97,11 @@ export const Students = () => {
       setSelectedStudent(null);
     } else {
       handleHttpAction(
+<<<<<<< HEAD
+        "https://binex.edu.pe:5000/server/students/save",
+=======
         "https://binex.edu.pe:3000/server/students/save",
+>>>>>>> 2a98695d84f433837875b64dc63587bd4b4bc759
         "POST",
         newStudentData
       );
@@ -137,7 +149,11 @@ export const Students = () => {
     if (!confirmDelete) return;
 
     handleHttpAction(
+<<<<<<< HEAD
+      `https://binex.edu.pe:5000/server/students/delete/${studentCodigo}`,
+=======
       `https://binex.edu.pe:3000/server/students/delete/${studentCodigo}`,
+>>>>>>> 2a98695d84f433837875b64dc63587bd4b4bc759
       "DELETE"
     );
 
@@ -165,7 +181,11 @@ export const Students = () => {
   
         // Enviar la solicitud HTTP al backend
         handleHttpAction(
+<<<<<<< HEAD
+          "https://binex.edu.pe:5000/server/students/save",
+=======
           "https://binex.edu.pe:3000/server/students/save",
+>>>>>>> 2a98695d84f433837875b64dc63587bd4b4bc759
           "POST",
           student
         );
@@ -181,7 +201,7 @@ export const Students = () => {
   if (!isAuthenticated) {
     return <div className="flex justify-center align-middle text-2xl p-4"><h1 className="upercase font-bold p-1">No tienes acceso a esta página.</h1><img className="h-10" src="src\assets\IMG\duke_java.png"></img></div>;
   }*/
-  if (!isAuthenticated || (isAuthenticated && user.email !== 'cimade.educacion@gmail.com')) {
+  if (!isAuthenticated || (isAuthenticated && user.email !== 'maycolmedina366@gmail.com')) {
     return <div className="flex justify-center align-middle text-2xl p-4"><h1 className="upercase font-bold p-1">No tienes acceso a esta página.</h1><img className="h-10" src="src\assets\IMG\duke_java.png"></img></div>;
   
   }
