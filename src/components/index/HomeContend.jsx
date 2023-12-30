@@ -13,10 +13,16 @@ const HomeContend = () => {
     <>
       <Carousel className="animate__animated animate__backInLeft">
         <Carousel.Item>
-          <img src="src\assets\IMG\oficial.jpg" />
+          <img src="src\assets\IMG\oficial4.png" />
+        </Carousel.Item>
+        <Carousel.Item>
+          <img src="src\assets\IMG\oficial3.png" />
         </Carousel.Item>
         <Carousel.Item>
           <img src="src\assets\IMG\oficial2.jpg" />
+        </Carousel.Item>
+        <Carousel.Item>
+          <img src="src\assets\IMG\oficial1.jpg" />
         </Carousel.Item>
       </Carousel>
 
@@ -43,7 +49,7 @@ const HomeContend = () => {
           </Card.Body>
         </Card>
         <Figure className="flex justify-center align-middle">
-          <Figure.Image className="animate__animated animate__backInLeft" src="src\assets\IMG\image3.png"/>
+          <Figure.Image className="animate__animated animate__backInLeft" src="src\assets\IMG\image4.png"/>
         </Figure>
       </Container>
 
