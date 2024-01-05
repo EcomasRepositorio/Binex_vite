@@ -8,7 +8,7 @@ import { Card, Container, Row, Col } from "react-bootstrap";
 const Certs = () => {
   const [searchType, setSearchType] = useState("");
   const [searchValue, setSearchValue] = useState("");
-  const { data, loading } = useFetch("https://ecomas.pe:4000/server/students");
+  const { data, loading } = useFetch("https://binex.edu.pe/server/students");
   const [selectedCert, setSelectedCert] = useState(null);
 
   const handleSearch = (type) => {
