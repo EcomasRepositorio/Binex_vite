@@ -3,7 +3,7 @@ import useFetch from "../useFetch";
 
 const Eventos = () => {
   const { data: formData, loading, error } = useFetch(
-    "https://ecomas.pe:4000/server/forms"
+    "https://binex.edu.pe:4500/server/forms"
   );
 
   const [currentTime, setCurrentTime] = useState(new Date());
