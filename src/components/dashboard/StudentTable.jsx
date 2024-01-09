@@ -7,7 +7,7 @@ export const StudentTable = ({ students, onDelete, onEdit }) => {
 
   const viewPDF = (pdfFileName) => {
     if (pdfFileName) {
-      const pdfURL = `http://binex.edu.pe:4500/server/pdf/${pdfFileName}`;
+      const pdfURL = `http://binex.edu.pe:8443/server/pdf/${pdfFileName}`;
       window.open(pdfURL, '_blank');
     }
   };
