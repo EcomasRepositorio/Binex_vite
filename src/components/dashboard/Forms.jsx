@@ -38,7 +38,7 @@ const Forms = () => {
     formData.append("url", url);
     formData.append("image", fileRef.current.files[0]);
 
-    handleHttpAction("https://binex.edu.pe/server/formulario/add", "POST", formData);
+    handleHttpAction("https://binex.edu.pe:4500/server/formulario/add", "POST", formData);
   };
 
   const fileRef = React.createRef();

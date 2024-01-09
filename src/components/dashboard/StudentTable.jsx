@@ -7,7 +7,7 @@ export const StudentTable = ({ students, onDelete, onEdit }) => {
 
   const viewPDF = (pdfFileName) => {
     if (pdfFileName) {
-      const pdfURL = `https://binex.edu.pe:6000/server/pdf/${pdfFileName}`;
+      const pdfURL = `http://binex.edu.pe:4500/server/pdf/${pdfFileName}`;
       window.open(pdfURL, '_blank');
     }
   };
@@ -54,6 +54,7 @@ export const StudentTable = ({ students, onDelete, onEdit }) => {
             <td>
               <button className="mx-2" onClick={() => onEdit(student)}>
                 <img src="src\assets\SVG\pencil-square.svg"></img>
+                
               </button>
               <button className="mx-2" onClick={() => onDelete(student.Codigo)}>
                 <img src="src\assets\SVG\trash2.svg"></img>
