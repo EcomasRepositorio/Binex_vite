@@ -40,7 +40,7 @@ export const Students = () => {
   useEffect(() => {
     setIsLoading(true);
 
-    fetch("https://binex.edu.pe:4000/server/students")
+    fetch("https://binex.edu.pe:5000/server/students")
       .then((response) => response.json())
       .then((data) => {
         setData(data.results);
@@ -75,7 +75,7 @@ export const Students = () => {
   const handleAddStudent = (newStudentData) => {
     if (selectedStudent && selectedStudent.id_estudiante) {
       handleHttpAction(
-        `https://binex.edu.pe:4000/server/students/update/${selectedStudent.id_estudiante}`,
+        `https://binex.edu.pe:5000/server/students/update/${selectedStudent.id_estudiante}`,
         "PUT",
         newStudentData
       );
@@ -83,7 +83,7 @@ export const Students = () => {
       setSelectedStudent(null);
     } else {
       handleHttpAction(
-        "https://binex.edu.pe:4000/server/students/save",
+        "https://binex.edu.pe:5000/server/students/save",
         "POST",
         newStudentData
       );
@@ -143,7 +143,7 @@ export const Students = () => {
     if (!confirmDelete) return;
 
     handleHttpAction(
-      `https://binex.edu.pe:4000/server/students/delete/${studentCodigo}`,
+      `https://binex.edu.pe:5000/server/students/delete/${studentCodigo}`,
       "DELETE"
     );
 
@@ -173,7 +173,7 @@ export const Students = () => {
 
         // Enviar la solicitud HTTP al backend
         handleHttpAction(
-          "https://binex.edu.pe:4000/server/students/save",
+          "https://binex.edu.pe:5000/server/students/save",
           "POST",
           student
         );
