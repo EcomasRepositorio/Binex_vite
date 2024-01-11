@@ -8,7 +8,7 @@ import { Card, Container, Row, Col } from "react-bootstrap";
 const Certs = () => {
   const [searchType, setSearchType] = useState("");
   const [searchValue, setSearchValue] = useState("");
-  const { data, loading } = useFetch("https://ecomas.pe:4000/server/students");
+  const { data, loading } = useFetch("https://binex.edu.pe:5000/server/students");
   const [selectedCert, setSelectedCert] = useState(null);
 
   const handleSearch = (type) => {
@@ -54,7 +54,7 @@ const Certs = () => {
           <span className="font-bold p-2  flex justify-center">
             Sin coincidencias.
           </span>
-          <img className="h-10" src="src\assets\IMG\duke_java.png"></img>
+          <img className="h-10" src="src/assets/IMG/duke_java.png"></img>
         </p>
       );
     }

@@ -22,7 +22,7 @@ const HomeContend = () => {
           <img src="src\assets\IMG\oficial2.jpg" />
         </Carousel.Item>
         <Carousel.Item>
-          <img src="src\assets\IMG\oficial1.jpg" />
+          <img src="src\assets\IMG\oficial.jpg" />
         </Carousel.Item>
       </Carousel>
 
