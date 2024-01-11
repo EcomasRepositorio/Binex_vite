@@ -33,15 +33,15 @@ const Certs = () => {
 
     if (searchType == "DNI") {
       filteredData = data.results.filter((cert) => cert.DNI == searchValue);
-    } else if (searchType === "nombre") {
+    } else if (searchType == "nombre") {
       // Filtrar solo cuando la búsqueda coincida con el nombre completo
       filteredData = data.results.filter((cert) => {
         const nombre = cert.Nombre || "";
-        return nombre.toLowerCase() === searchValue;
+        return nombre.toLowerCase() == searchValue;
       });
-    } else if (searchType === "codigo") {
+    } else if (searchType == "codigo") {
       const foundCert = data.results.find(
-        (cert) => cert.Codigo === searchValue
+        (cert) => cert.Codigo == searchValue
       );
       if (foundCert) {
         return renderFloatingWindow(foundCert);
