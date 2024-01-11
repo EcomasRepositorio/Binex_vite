@@ -31,8 +31,8 @@ const Certs = () => {
 
     let filteredData = [];
 
-    if (searchType === "DNI") {
-      filteredData = data.results.filter((cert) => cert.DNI === searchValue);
+    if (searchType == "DNI") {
+      filteredData = data.results.filter((cert) => cert.DNI == searchValue);
     } else if (searchType === "nombre") {
       // Filtrar solo cuando la búsqueda coincida con el nombre completo
       filteredData = data.results.filter((cert) => {
