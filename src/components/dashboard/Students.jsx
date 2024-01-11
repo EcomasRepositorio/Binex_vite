@@ -183,14 +183,15 @@ export const Students = () => {
     };
     reader.readAsArrayBuffer(file);
   };
-
-  if (!isAuthenticated || (isAuthenticated && user.email !== 'maycolmedina366@gmail.com')) {
-    return (
-      <div className="flex justify-center align-middle text-2xl p-4">
-        <h1 className="upercase font-bold p-1">No tienes acceso a esta página.</h1>
-        <img className="h-10" src="src\assets\IMG\duke_java.png" alt="Unauthorized" />
-      </div>
-    );
+  
+  
+/*
+  if (!isAuthenticated) {
+    return <div className="flex justify-center align-middle text-2xl p-4"><h1 className="upercase font-bold p-1">No tienes acceso a esta página.</h1><img className="h-10" src="src\assets\IMG\duke_java.png"></img></div>;
+  }*/
+  if (!isAuthenticated || (isAuthenticated && user.email !== 'cimade.educacion@gmail.com')) {
+    return <div className="flex justify-center align-middle text-2xl p-4"><h1 className="upercase font-bold p-1">No tienes acceso a esta página.</h1><img className="h-10" src="src\assets\IMG\duke_java.png"></img></div>;
+  
   }
 
   return (
