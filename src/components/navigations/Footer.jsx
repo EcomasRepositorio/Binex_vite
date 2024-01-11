@@ -16,49 +16,59 @@ const Footer = () => {
 
           <div className="col-sm">
             <br />
-            <h2 className="font-sans text-2xl font-bold mb-2">Contáctanos</h2>
+            <h2 className="font-sans text-2xl font-bold mb-2">Informes</h2>
             <ul className="text-base mb-5">
-              <li>Sobre BINEX</li>
-              <li>Historia</li>
-              <li>Valores</li>
-              <li>Funciones</li>
-              <li>Política institucional</li>
-              <li>Autoridades</li>
-              <li>Publicaciones</li>
-              <li>Galería de titulación</li>
+
+            <li className="flex items-center">
+
+               <img 
+                src="src\assets\SVG\Icono_Correo.svg"
+                alt="correo"
+                className="w-7 h-10 mr-2"
+              />
+              <span>capacitaciones@binex.edu.pe</span>
+             </li>
+             <li className="flex items-center">
+
+               <img 
+                src="src\assets\SVG\Icono_Whatsapp.svg"
+                alt="correo"
+                className="w-7 h-10 mr-3"
+                 />
+                  <span>+51 921814045</span>
+                </li>
+             <li className="flex items-center">
+
+            <img 
+              src="src\assets\SVG\Icono_Reloj.svg"
+              alt="correo"
+              className="w-7 h-10 mr-2"
+            />
+               <span className="mr-2">Horarios de Atención:</span>
+               <span className="ml-2">09:00 AM - 06:00 PM</span>
+
+            </li><br/> 
+              
             </ul>
           </div>
 
-          <div className="col-sm">
-            <br />
-            <h5 className="font-sans text-2xl font-bold mb-2">Horario de atención</h5>
-            <ul>
-              <li>Agroindustrias</li>
-              <li>Administración de Empresas</li>
-              <li>Artes gráficas</li>
-              <li>Confecciones</li>
-              <li>Electrotecnia</li>
-              <li>Hotelería y turismo</li>
-              <li>Industrias alimentarias</li>
-              <li>Informática</li>
-              <li>Mecánica automotriz</li>
-              <li>Metalmecánica</li>
-              <li>Tecnologías ambientales</li>
-              <li>Textil</li>
+          <div className="col-sm"><br/>
+            <h2 className="font-sans text-2xl font-bold mb-6">Libro de Reclamaciones</h2>
+            <ul className="flex justify-center list-none">
+             <li>
+           <img
+             src="src/assets/SVG/Icono_librop.svg"
+             alt="correo"
+            className="w-8 h-9 mr-10" // Ajusta el valor de ml (margen izquierdo) según tus necesidades
+             />
+           </li>
             </ul>
+            </div>
 
-            <ul className="font-bold">
-              <li>Postulantes</li>
-              <li>Empresas</li>
-              <li>Alumnos</li>
-              <li>Egresados</li>
-              <li>Colaboradores</li>
-            </ul>
-          </div>
 
           <div className="col-sm">
             <br />
-            <h5 className="font-sans text-2xl font-bold mb-4">Síguenos en :</h5>
+            <h5 className="font-sans text-2xl font-bold mb-4">Síguenos en </h5>
             <div className="flex items-center">
               <a
                 href="https://www.facebook.com/BinexEdu"
