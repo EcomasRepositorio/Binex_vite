@@ -116,7 +116,7 @@ const Footer = () => {
         <div className="m-3 py-4 border-top border-secondary">
           <div className="container text-center">
             <p className="text-secondary mb-0 py-2">
-              © 2023 Binex All rights reserved.
+              © 2024 Binex All rights reserved.
             </p>
           </div>
         </div>
