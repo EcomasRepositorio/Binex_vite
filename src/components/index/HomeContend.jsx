@@ -13,16 +13,16 @@ const HomeContend = () => {
     <>
       <Carousel className="animate__animated animate__backInLeft">
         <Carousel.Item>
-          <img src="src\assets\IMG\banner.png" />
+          <img src="src\assets\IMG\banner.webp" />
         </Carousel.Item>
         <Carousel.Item>
-          <img src="src\assets\IMG\banner2.png" />
+          <img src="src\assets\IMG\banner2.webp" />
         </Carousel.Item>
         <Carousel.Item>
-          <img src="src\assets\IMG\banner3.png" />
+          <img src="src\assets\IMG\banner3.webp" />
         </Carousel.Item>
         <Carousel.Item>
-          <img src="src\assets\IMG\banner4.png" />
+          <img src="src\assets\IMG\banner4.webp" />
         </Carousel.Item>
       </Carousel>
 
@@ -30,29 +30,27 @@ const HomeContend = () => {
         <Card className="border-0">
           <Card.Body>
             <Card.Title className="flex justify-start align-middle">
-              <p
-                style={{ color: "#05be50" }}
-                className="animate__animated animate__backInDown font-bold text-6xl"
-              >
-                ¿Porque estudiar en Binex?
-              </p>
+            <h1 className="font-extrabold text-transparent text-6xl sm:text-6xl bg-clip-text" style={{ backgroundImage: 'linear-gradient(to right, #2878B7, #1DDAB8)' }}>
+             Tu futuro comienza...
+            </h1>
+
             </Card.Title>
             <Card.Text>
               <p
-                style={{ color: "#0039a6" }}
+                style={{ color: "#6d6d6d", fontFamily: "Arial, sans-serif" }}
                 className="animate__animated animate__backInLeft text-2xl"
               >
-                ¡Optar por Binex implica acceder a una formación de alta calidad respaldada
-                 por instituciones académicas y reconocimiento profesional!
+                Te invitamos a explorar nuestros programas y descubrir cómo podemos colaborar en la realización de tus metas académicas y profesionales.
+                Estamos comprometidos con tu éxito y desarrollo integral. ¡Únete a nosotros y comienza tu viaje educativo hacia un futuro brillante!
               </p>
             </Card.Text>
           </Card.Body>
         </Card>
         <Figure className="flex justify-center align-middle">
-          <Figure.Image className="animate__animated animate__backInLeft" src="src\assets\IMG\image4.png"/>
+          <Figure.Image className="animate__animated animate__backInLeft" src="src\assets\IMG\imageW.webp"/>
         </Figure>
       </Container>
-
+       
       <div style={{  backgroundImage: "linear-gradient(to right, #2878B7, #1DDAB8)" }} className="p-5">
       <Container className="my-3 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-5 justify-items-center text-center">
         <Card className="animate-slide-in-left min-w-[250px] p-2 rounded-3xl w-7/12 shadow-2xl hover:-translate-y-12 transition delay-150 duration-300">
@@ -91,8 +89,11 @@ const HomeContend = () => {
             </Card.Text>
           </Card.Body>
         </Card>
+        
       </Container>
       </div>
+      
+
     </>
   );
 };
