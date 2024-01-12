@@ -114,17 +114,9 @@ const Certs = () => {
               </span>
             </button>
           </Container>
-          <Container className="flex justify-center align-middle">
-            <img
-              className="h-20"
-              src="src\assets\IMG\colegio_abogados.png"
-            ></img>
-            <img
-              className="h-20"
-              src="src\assets\IMG\Ecomas_horizontal.png"
-            ></img>
-            <img className="h-20" src="src\assets\IMG\UNP.png"></img>
-            <img className="h-20" src="src\assets\IMG\CIP.png"></img>
+          <Container className="flex justify-center align-middle">        
+            <img className="h-24" src="src\assets\IMG\UNP.png"></img>
+         
           </Container>
           <Container>
             <ListGroup>

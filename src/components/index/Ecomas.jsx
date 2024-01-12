@@ -16,9 +16,9 @@ const Ecomas = () => {
         </div>
       </div>
       <div className="page-banner-entry text-center">
-              <img id="assets-images-logos-logos-certs" className="mx-4" src="assets\images\logos\logos-certs\CALL.png" height="250px"></img>
+              
               <img id="assets-images-logos-logos-certs" className="mx-4" src="assets/images/logos/logos-certs/UNP.png" height="250px"></img>
-              <img id="assets-images-logos-logos-certs" className="mx-4" src="assets\images\logos\logos-certs\CIP.png" height="250px"></img>
+              
 
             </div>
     </div>
