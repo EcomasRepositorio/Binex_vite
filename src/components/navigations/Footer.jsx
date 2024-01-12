@@ -14,9 +14,8 @@ const Footer = () => {
 
           <div className="page-content bg-white border-t border-white-100" />
 
-          <div className="col-sm">
-            <br />
-            <h2 className="font-sans text-2xl font-bold mb-2">Informes</h2>
+          <div className="col-sm"><br/>
+            <h2 className="font-sans text-2xl font-bold mb-2">Informes</h2><br/>
             <ul className="text-base mb-5">
 
             <li className="flex items-center">
@@ -30,14 +29,30 @@ const Footer = () => {
              </li>
              <li className="flex items-center">
 
+             <img 
+             src="src\assets\SVG\Icono_Librop.svg"
+             alt="correo"
+             className="w-6 h-9 mr-2"
+             />
+            <span>Libro de Reclamaciones</span>
+             </li>
+
+            </ul>
+          </div>
+
+          <div className="col-sm"><br/>
+            <h2 className="font-sans text-2xl font-bold mb-6">Matriculas Abiertas</h2>
+            <li className="flex items-center">
+
                <img 
                 src="src\assets\SVG\Icono_Whatsapp.svg"
                 alt="correo"
-                className="w-7 h-10 mr-3"
+                className="w-7 h-10 mr-1"
                  />
                   <span>+51 921814045</span>
                 </li>
-             <li className="flex items-center">
+
+                <li className="flex items-center">
 
             <img 
               src="src\assets\SVG\Icono_Reloj.svg"
@@ -48,23 +63,8 @@ const Footer = () => {
                <span className="ml-2">09:00 AM - 06:00 PM</span>
 
             </li><br/> 
-              
-            </ul>
-          </div>
-
-          <div className="col-sm"><br/>
-            <h2 className="font-sans text-2xl font-bold mb-6">Libro de Reclamaciones</h2>
-            <ul className="flex justify-center list-none">
-             <li>
-           <img
-             src="src/assets/SVG/Icono_librop.svg"
-             alt="correo"
-            className="w-8 h-9 mr-10" // Ajusta el valor de ml (margen izquierdo) según tus necesidades
-             />
-           </li>
-            </ul>
             </div>
-
+       
 
           <div className="col-sm">
             <br />
