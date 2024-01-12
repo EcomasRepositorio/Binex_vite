@@ -13,13 +13,16 @@ const HomeContend = () => {
     <>
       <Carousel className="animate__animated animate__backInLeft">
         <Carousel.Item>
-          <img src="src\assets\IMG\oficial3.png" />
+          <img src="src\assets\IMG\banner.png" />
         </Carousel.Item>
         <Carousel.Item>
-          <img src="src\assets\IMG\oficial4.png" />
+          <img src="src\assets\IMG\banner2.png" />
         </Carousel.Item>
         <Carousel.Item>
-          <img src="src\assets\IMG\oficial.jpg" />
+          <img src="src\assets\IMG\banner3.png" />
+        </Carousel.Item>
+        <Carousel.Item>
+          <img src="src\assets\IMG\banner4.png" />
         </Carousel.Item>
       </Carousel>
 
