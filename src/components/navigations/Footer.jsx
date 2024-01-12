@@ -30,7 +30,7 @@ const Footer = () => {
              <li className="flex items-center">
 
              <img 
-             src="src\assets\SVG\Icono_Librop.svg"
+             src="src\assets\SVG\Icono_reclamaciones.svg"
              alt="correo"
              className="w-6 h-9 mr-2"
              />
