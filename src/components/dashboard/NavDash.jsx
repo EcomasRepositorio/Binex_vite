@@ -10,7 +10,7 @@ const NavDash = () => {
             {" "}
             <span>
               <img
-                src="assets/images/icon_ecomas_jpg/escape.png"
+                src="src\assets\IMG\home.webp"
                 style={{ filter: "invert()", width: "50px" }}
               ></img>
             </span>

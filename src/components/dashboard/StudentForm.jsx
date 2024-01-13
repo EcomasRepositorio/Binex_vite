@@ -182,7 +182,7 @@ export const StudentForm = ({ student, onSave, onCancel }) => {
           onChange={handleFileChange}
         />
       </div>
-      <button type="submit" className="btn btn-primary m-2">
+      <button type="submit" className="btn btn-info m-2">
           Guardar
         </button>
         <button type="button" className="btn btn-warning m-2" onClick={onCancel}>
