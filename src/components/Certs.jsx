@@ -100,47 +100,44 @@ const Certs = () => {
   };
 
   const renderFloatingWindow = (cert) => {
-    if (!cert) {
-      return null;
-    }
+    const isModalOpen = !!cert;
+    
 
     return (
-      <div className=" bg-white fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-50 shadow-lg rounded-lg p-4 w-3/4 md:max-w-md flex justify-center items-center">
-        <div>
-          <Container className="flex justify-end">
-            <button onClick={handleWindowClose}>
-              <span className="h-60" aria-hidden="true">
-                &times;
-              </span>
-            </button>
-          </Container>
-          <Container className="flex justify-center align-middle">        
-            <img className="h-24" src="src\assets\IMG\UNP.png"></img>
-         
-          </Container>
-          <Container>
-            <ListGroup>
-              <ListGroup.Item className="font-bold">
-                Organizado por:
-              </ListGroup.Item>
-              <ListGroup.Item>{cert.Instituciones}</ListGroup.Item>
-              <ListGroup.Item className="font-bold">Otorgado a:</ListGroup.Item>
-              <ListGroup.Item>
-                {cert.Nombre} <span> ({cert.Participacion})</span>
-              </ListGroup.Item>
-              <ListGroup.Item className="font-bold">
-                Nombre del evento:
-              </ListGroup.Item>
-              <ListGroup.Item>{cert.ActividadAcademica}</ListGroup.Item>
-              <ListGroup.Item className="font-bold">
-                Horas/Créditos:
-              </ListGroup.Item>
-              <ListGroup.Item>{cert.Horas}</ListGroup.Item>
-              <ListGroup.Item className="font-bold">Fecha:</ListGroup.Item>
-              <ListGroup.Item>{cert.Fecha}</ListGroup.Item>
-            </ListGroup>
-          </Container>
-        </div>
+      <div>
+        {/* Contenido del modal */}
+        {isModalOpen && (
+          <div className="fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center ">
+            <div className="prose bg-white p-4 md:max-w-md mx-auto rounded-lg">
+              <Container className="flex justify-end">
+                <button onClick={handleWindowClose}>
+                  <span className="h-60" aria-hidden="true">
+                    &times;
+                  </span>
+                </button>
+              </Container>
+              <Container className=" flex justify-center align-middle">
+                <img className=" h-24" src="src\assets\IMG\UNP.png" alt="UNP" />
+              </Container>
+              <Container>
+                <ListGroup>
+                  <ListGroup.Item className="font-bold">Organizado por:</ListGroup.Item>
+                  <ListGroup.Item>{cert.Instituciones}</ListGroup.Item>
+                  <ListGroup.Item className="font-bold">Otorgado a:</ListGroup.Item>
+                  <ListGroup.Item>
+                    {cert.Nombre} <span> ({cert.Participacion})</span>
+                  </ListGroup.Item>
+                  <ListGroup.Item className="font-bold">Nombre del evento:</ListGroup.Item>
+                  <ListGroup.Item>{cert.ActividadAcademica}</ListGroup.Item>
+                  <ListGroup.Item className="font-bold">Horas/Créditos:</ListGroup.Item>
+                  <ListGroup.Item>{cert.Horas}</ListGroup.Item>
+                  <ListGroup.Item className="font-bold">Fecha:</ListGroup.Item>
+                  <ListGroup.Item>{cert.Fecha}</ListGroup.Item>
+                </ListGroup>
+              </Container>
+            </div>
+          </div>
+        )}
       </div>
     );
   };

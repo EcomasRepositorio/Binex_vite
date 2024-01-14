@@ -181,7 +181,8 @@ export const Students = () => {
       // Filtramos los estudiantes por DNI
       const filtered = data.filter(student => {
         const studentDNI = String(student.DNI).trim().toLowerCase();
-        return typeof studentDNI === 'string' && studentDNI.includes(searchTerm);
+       
+        return studentDNI === searchTerm;
       });
 
       setFilteredStudents(filtered);
@@ -224,13 +225,16 @@ export const Students = () => {
          }}
          />
          <br />
+         <Button variant="outline-primary" onClick={handleSearch}>
+            Buscar
+          </Button>
             <Button variant="outline-primary" onClick={() => setIsAddingStudent(true)}>
            Agregar estudiante
             </Button>
              <Button variant="outline-success" onClick={() => document.getElementById("importExcelInput").click()}>
            Agregar por excel
             </Button>
-     </InputGroup>
+         </InputGroup>
 
             <input
               type="file"
