@@ -190,6 +190,42 @@ export const Students = () => {
    
   };
 
+
+ 
+ 
+// PARA LIMPIAR LOS DATOS INSERTADOS
+  const handleClear = () => {
+    setSearchValue('');
+    setIsSearching(false);
+    setHasSearchResult(false);
+   
+    
+  }; 
+
+  const handleShowAll = () => {
+    setShouldReloadData(true);
+    setShouldShowAll(true);
+  };
+
+  useEffect(() => {
+    setIsLoading(true);
+  
+    if (shouldReloadData) {
+      fetch("https://binex.edu.pe:5000/server/students")
+        .then((response) => response.json())
+        .then((data) => {
+          setData(data.results);
+          setFilteredStudents(data.results);
+          setIsLoading(false);
+          setShouldReloadData(false);
+        })
+        .catch((error) => {
+          console.error("Error fetching students:", error);
+          setIsLoading(false);
+        });
+    }
+  }, [shouldReloadData]);
+  
   
 
   if (!isAuthenticated || (isAuthenticated && user.email !== 'cimade.educacion@gmail.com')) {
@@ -219,23 +255,27 @@ export const Students = () => {
          placeholder="Buscar por DNI"
          aria-label="Recipient's username with two button addons"
          value={searchValue}
-         onChange={(e) => {
-         setSearchValue(e.target.value);
-         handleSearch(); // Llama a handleSearch cada vez que el valor del input cambia
-         }}
+         onChange={(e) => setSearchValue(e.target.value)}
          />
          <br />
-         <Button variant="outline-primary" onClick={handleSearch}>
+         <Button variant="outline-primary"  onClick={() => { handleSearch(); setIsSearching(true);}}>
             Buscar
           </Button>
-            <Button variant="outline-primary" onClick={() => setIsAddingStudent(true)}>
+          <Button variant="outline-danger" onClick={() => handleClear()} >
+            Limpiar
+          </Button>
+          <Button variant="outline-primary" onClick={() => { handleSearch(); setIsSearching(true);}} className="mr-6" >
+            Regresar
+          </Button>
+            <Button className="bg-blue-500 hover:bg-blue-700 active:bg-blue-800 hover:bg-green-700 active:bg-blue-800" onClick={() => setIsAddingStudent(true)}>
            Agregar estudiante
             </Button>
-             <Button variant="outline-success" onClick={() => document.getElementById("importExcelInput").click()}>
+             <Button className="bg-green-500 hover:bg-green-700 active:bg-green-800 hover:bg-green-700 active:bg-green-800" onClick={() => document.getElementById("importExcelInput").click()}>
            Agregar por excel
             </Button>
+            
          </InputGroup>
-
+          
             <input
               type="file"
               id="importExcelInput"
@@ -244,7 +284,7 @@ export const Students = () => {
               onChange={handleImportFromExcel}
             />
           </Container>
-
+           
           {isAddingStudent && (
             <StudentForm
               student={newStudent}
@@ -252,7 +292,7 @@ export const Students = () => {
               onCancel={handleCancel}
             />
           )}
-
+           
           {isEditingStudent && selectedStudent && (
             <StudentForm
               student={newStudent}
