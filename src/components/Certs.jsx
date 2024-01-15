@@ -5,6 +5,7 @@ import Footer from "./navigations/Footer";
 import ListGroup from "react-bootstrap/ListGroup";
 import { Card, Container, Row, Col } from "react-bootstrap";
 
+
 const Certs = () => {
   const [searchType, setSearchType] = useState("");
   const [searchValue, setSearchValue] = useState("");
@@ -108,7 +109,7 @@ const Certs = () => {
         {/* Contenido del modal */}
         {isModalOpen && (
           <div className="fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center ">
-            <div className="prose bg-white p-4 md:max-w-md mx-auto rounded-lg">
+            <div className="prose bg-white p-12 md:max-w-md mx-auto rounded-lg">
               <Container className="flex justify-end">
                 <button onClick={handleWindowClose}>
                   <span className="h-60" aria-hidden="true">
@@ -116,23 +117,27 @@ const Certs = () => {
                   </span>
                 </button>
               </Container>
-              <Container className=" flex justify-center align-middle">
-                <img className=" h-24" src="src\assets\IMG\UNP.png" alt="UNP" />
+              <Container className="flex items-center justify-center mt-[-50px]">
+                <img className=" h-64" src="src\assets\IMG\UNP.png" alt="UNP" />
               </Container>
               <Container>
-                <ListGroup>
-                  <ListGroup.Item className="font-bold">Organizado por:</ListGroup.Item>
+                <ListGroup className="">
+                  <ListGroup.Item className="bg-gray-700 font-bold text-white rounded">
+                    Organizado por:
+                    
+                    </ListGroup.Item>
                   <ListGroup.Item>{cert.Instituciones}</ListGroup.Item>
-                  <ListGroup.Item className="font-bold">Otorgado a:</ListGroup.Item>
+                  <ListGroup.Item className="bg-gray-700 font-bold text-white rounded">Otorgado a:</ListGroup.Item>
                   <ListGroup.Item>
                     {cert.Nombre} <span> ({cert.Participacion})</span>
                   </ListGroup.Item>
-                  <ListGroup.Item className="font-bold">Nombre del evento:</ListGroup.Item>
+                  <ListGroup.Item className="bg-gray-700 font-bold text-white rounded">Nombre del evento:</ListGroup.Item>
                   <ListGroup.Item>{cert.ActividadAcademica}</ListGroup.Item>
-                  <ListGroup.Item className="font-bold">Horas/Créditos:</ListGroup.Item>
+                  <ListGroup.Item className="bg-gray-700 font-bold text-white rounded">Créditos/Horas:</ListGroup.Item>
                   <ListGroup.Item>{cert.Horas}</ListGroup.Item>
-                  <ListGroup.Item className="font-bold">Fecha:</ListGroup.Item>
+                  <ListGroup.Item className="bg-gray-700 font-bold text-white rounded">Fecha emisión:</ListGroup.Item>
                   <ListGroup.Item>{cert.Fecha}</ListGroup.Item>
+                  
                 </ListGroup>
               </Container>
             </div>
