@@ -4,6 +4,11 @@ import { Header } from "./navigations/Header";
 import Footer from "./navigations/Footer";
 import ListGroup from "react-bootstrap/ListGroup";
 import { Card, Container, Row, Col } from "react-bootstrap";
+import IconSvgA from '/src/assets/SVG/otorgado.svg';
+import IconSvgB from '/src/assets/SVG/creditos_horas.svg';
+import IconSvgC from '/src/assets/SVG/fecha_emision.svg';
+import IconSvgD from '/src/assets/SVG/nom_evento.svg';
+import IconSvgE from '/src/assets/SVG/organizadopor.svg';
 
 
 const Certs = () => {
@@ -117,26 +122,43 @@ const Certs = () => {
                   </span>
                 </button>
               </Container>
-              <Container className="flex items-center justify-center mt-[-50px]">
-                <img className=" h-64" src="src\assets\IMG\UNP.png" alt="UNP" />
+              <Container className="flex items-center justify-center mt-[-90px]">
+                <img className="h-35 w-64 mt-1" src="src\assets\IMG\UNP.png" alt="UNP" />
               </Container>
               <Container>
                 <ListGroup className="">
-                  <ListGroup.Item className="bg-gray-700 font-bold text-white rounded">
-                    Organizado por:
-                    
-                    </ListGroup.Item>
-                  <ListGroup.Item>{cert.Instituciones}</ListGroup.Item>
-                  <ListGroup.Item className="bg-gray-700 font-bold text-white rounded">Otorgado a:</ListGroup.Item>
-                  <ListGroup.Item>
+                
+                 <ListGroup.Item style={{height: '35px'}} className="bg-[#4D4D4D] font-bold text-white rounded ml-0 flex items-center mb-1">
+                  <img src={IconSvgE} alt="Icono" style={{ width: '70px' }} className="h-6 w-6 ml-2 mr-0" />
+                  <span className="ml-2">Organizado por:</span>
+                  </ListGroup.Item>
+                  <ListGroup.Item className="border-0">{cert.Instituciones}</ListGroup.Item>
+
+                  <ListGroup.Item style={{height: '35px'}} className="bg-[#4D4D4D] font-bold text-white rounded mr-0 flex items-center mb-2 ">
+                  <img src={IconSvgA} alt="Icono" style={{ width: '70px' }} className="h-6 w-6 ml-2 mr-0" />
+                  <span className="ml-2">Otorgado a:</span>
+                  </ListGroup.Item>
+                  <ListGroup.Item className="border-0">
                     {cert.Nombre} <span> ({cert.Participacion})</span>
                   </ListGroup.Item>
-                  <ListGroup.Item className="bg-gray-700 font-bold text-white rounded">Nombre del evento:</ListGroup.Item>
-                  <ListGroup.Item>{cert.ActividadAcademica}</ListGroup.Item>
-                  <ListGroup.Item className="bg-gray-700 font-bold text-white rounded">Créditos/Horas:</ListGroup.Item>
-                  <ListGroup.Item>{cert.Horas}</ListGroup.Item>
-                  <ListGroup.Item className="bg-gray-700 font-bold text-white rounded">Fecha emisión:</ListGroup.Item>
-                  <ListGroup.Item>{cert.Fecha}</ListGroup.Item>
+
+                  <ListGroup.Item style={{height: '35px'}} className="bg-[#4D4D4D] font-bold text-white rounded mr-0 flex items-center mb-2 ">
+                  <img src={IconSvgD} alt="Icono" style={{ width: '70px' }} className="h-6 w-6 ml-1 mr-0" />
+                  <span className="ml-2">Nombre del evento:</span>
+                  </ListGroup.Item>
+                  <ListGroup.Item className="border-0">{cert.ActividadAcademica}</ListGroup.Item>
+
+                  <ListGroup.Item style={{height: '35px'}} className="bg-[#4D4D4D] font-bold text-white rounded mr-0 flex items-center mb-2">
+                  <img src={IconSvgB} alt="Icono" style={{ width: '70px' }} className="h-6 w-6 ml-2 mr-0" />
+                  <span className="ml-2">Créditos/Horas:</span>
+                  </ListGroup.Item>
+                  <ListGroup.Item className="border-0">{cert.Horas}</ListGroup.Item>
+
+                  <ListGroup.Item style={{height: '35px'}} className="bg-[#4D4D4D] font-bold text-white rounded mr-0 flex items-center mb-2">
+                  <img src={IconSvgC} alt="Icono" style={{ width: '70px' }} className="h-6 w-6 ml-2 mr-0" />
+                  <span className="ml-2">Fecha emisión:</span>
+                  </ListGroup.Item>
+                  <ListGroup.Item className="border-0">{cert.Fecha}</ListGroup.Item>
                   
                 </ListGroup>
               </Container>
