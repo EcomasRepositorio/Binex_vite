@@ -89,13 +89,51 @@ const HomeContend = () => {
             </Card.Text>
           </Card.Body>
         </Card>
-        
       </Container>
-      </div>
-      
+       
+      </div><br/><br/>
+     
+     
+      <div style={{ backgroundImage: "linear-gradient(to right, #ffffff, #ffffff)" }} className="p-5">
+      <Container className="my-3 grid grid-cols-1 sm:grid-cols-2 gap-5 justify-items-center text-center">
+        <Card className="animate-slide-in-left min-w-[450px] p-5 rounded-4xl w-7/12 shadow-4xl border-none ">
+          <Card.Body >
+          <Card.Title className="font-bold font-mono font-montserrat text-3xl">¡Desata tu potencial al máximo!</Card.Title>
+            <Card.Text className="font-montserrat">
+              El liderazgo y la innovación son componentes esenciales de tu desarrollo en Binex.
+              Aquí, tus ideas pueden convertirse en realidad gracias a nuestra cultura.
+              ¡Descubre cómo llevar tu talento al siguiente nivel!
+            </Card.Text>
+          </Card.Body>
+        </Card>
+
+        <div className="flex items-center justify-center sm:justify-end">
+        <img className="w-65 h-auto object-cover border border-solid border-blue-500 border-0 rounded-5 hover:-translate-x-4 transition delay-150 duration-500" src="src/assets/IMG/grupo.webp" alt="Mortarboard" />
+        </div>
+      </Container>
+    </div>
+
+
+    <div style={{ backgroundImage: "linear-gradient(to right, #ffffff, #ffffff)" }} className="p-5">
+      <Container className="my-3 grid grid-cols-1 sm:grid-cols-2 gap-5 justify-items-center text-center">
+        <div className="flex items-center justify-center sm:justify-end">
+        <img className="w-full h-full object-cover border border-solid border-blue-500 border-0 rounded-5 hover:-translate-x-4 transition delay-150 duration-500" src="src/assets/IMG/openW2.webp" alt="Mortarboard" />
+        </div>
+        <Card className="animate-slide-in-left min-w-[450px] p-5 rounded-4xl w-7/12 shadow-4xl border-none ">
+          <Card.Body>
+            <Card.Title className="font-bold font-mono font-montserrat text-3xl">Descubre un mundo de posibilidades.</Card.Title>
+            <Card.Text className="font-montserrat">
+              El liderazgo y la innovación son componentes esenciales de tu desarrollo en Binex.
+              Aquí, tus ideas pueden convertirse en realidad gracias a nuestra cultura.
+              ¡Descubre cómo llevar tu talento al siguiente nivel!
+            </Card.Text>
+          </Card.Body>
+        </Card>
+      </Container>
+    </div>
 
     </>
   );
-};
+}; 
 
 export default HomeContend;

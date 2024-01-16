@@ -7,13 +7,19 @@ module.exports = {
   ],
   theme: {
     extend: {
+      fontFamily: {
+        'montserrat': ['Montserrat', 'sans-serif'],
+      },
       backgroundColor: {
         'custom1': '#1DDAB8',
         'custom2': '#2878B7',
       },
     },
   },
-  plugins: [],
+  plugins: [
+    require('@tailwindcss/typography'),
+    // Otros plugins si los tienes
+  ],
 };
 
 

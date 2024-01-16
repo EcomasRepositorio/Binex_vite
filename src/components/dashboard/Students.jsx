@@ -8,15 +8,13 @@ import { Container } from "react-bootstrap";
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 import InputGroup from 'react-bootstrap/InputGroup';
-import { Link } from "react-router-dom";
+
 
 
 
 export const Students = () => {
   const { isAuthenticated, user } = useAuth0();
-
-  const topOfPageRef = useRef(null); // Ref para hacer scroll
-
+  const topOfPageRef = useRef(null);
   const [data, setData] = useState([]);
   const [filteredStudents, setFilteredStudents] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
@@ -90,12 +88,8 @@ export const Students = () => {
       setIsAddingStudent(false);
     }
 
-    // Hacer scroll hasta la parte superior de la página
     topOfPageRef.current.scrollIntoView({ behavior: "smooth" });
   };
-
-
-
 
   const handleEditStudent = (student) => {
     setNewStudent({
@@ -112,13 +106,9 @@ export const Students = () => {
     setSelectedStudent(student);
     setIsEditingStudent(true);
 
-    // Hacer scroll hasta la parte superior de la página
     topOfPageRef.current.scrollIntoView({ behavior: "smooth" });
   };
 
-
-
-  
   const handleCancel = () => {
     setIsAddingStudent(false);
     setIsEditingStudent(false);
@@ -153,7 +143,6 @@ export const Students = () => {
     setData(updatedStudents);
     setFilteredStudents(updatedStudents);
 
-    // Hacer scroll hasta la parte superior de la página
     topOfPageRef.current.scrollIntoView({ behavior: "smooth" });
   };
 
@@ -168,10 +157,7 @@ export const Students = () => {
       const students = XLSX.utils.sheet_to_json(worksheet);
 
       students.forEach((student) => {
-        // Convertir la propiedad 'Fecha' a una cadena
         student.Fecha = String(student.Fecha);
-
-        // Enviar la solicitud HTTP al backend
         handleHttpAction(
           "https://binex.edu.pe:5000/server/students/save",
           "POST",
@@ -183,43 +169,113 @@ export const Students = () => {
     };
     reader.readAsArrayBuffer(file);
   };
+
+  const handleSearch = () => {
+    
+    const searchTerm = searchValue.trim().toLowerCase();
+
+    if (searchTerm === "") {
+      // Si el término de búsqueda está vacío, mostramos todos los estudiantes
+      setFilteredStudents(data);
+    } else {
+      // Filtramos los estudiantes por DNI
+      const filtered = data.filter(student => {
+        const studentDNI = String(student.DNI).trim().toLowerCase();
+       
+        return studentDNI === searchTerm;
+      });
+
+      setFilteredStudents(filtered);
+    }
+   
+  };
+
+
+ 
+ 
+// PARA LIMPIAR LOS DATOS INSERTADOS
+  const handleClear = () => {
+    setSearchValue('');
+    setIsSearching(false);
+    setHasSearchResult(false);
+   
+    
+  }; 
+
+  const handleShowAll = () => {
+    setShouldReloadData(true);
+    setShouldShowAll(true);
+  };
+
+  useEffect(() => {
+    setIsLoading(true);
+  
+    if (shouldReloadData) {
+      fetch("https://binex.edu.pe:5000/server/students")
+        .then((response) => response.json())
+        .then((data) => {
+          setData(data.results);
+          setFilteredStudents(data.results);
+          setIsLoading(false);
+          setShouldReloadData(false);
+        })
+        .catch((error) => {
+          console.error("Error fetching students:", error);
+          setIsLoading(false);
+        });
+    }
+  }, [shouldReloadData]);
   
   
-/*
-  if (!isAuthenticated) {
-    return <div className="flex justify-center align-middle text-2xl p-4"><h1 className="upercase font-bold p-1">No tienes acceso a esta página.</h1><img className="h-10" src="src\assets\IMG\duke_java.png"></img></div>;
-  }*/
+
   if (!isAuthenticated || (isAuthenticated && user.email !== 'cimade.educacion@gmail.com')) {
-    return <div className="flex justify-center align-middle text-2xl p-4"><h1 className="upercase font-bold p-1">No tienes acceso a esta página.</h1><img className="h-10" src="src\assets\IMG\duke_java.png"></img></div>;
-  
+    return (
+      <div className="flex justify-center align-middle text-2xl p-4">
+        <h1 className="uppercase font-bold p-1">No tienes acceso a esta página.</h1>
+        <img className="h-10" src="src\assets\IMG\sad.png" alt="Access Denied" />
+      </div>
+    );
   }
 
   return (
     <div>
-      <div ref={topOfPageRef}></div> {/* Ref para hacer scroll */}
+      <div ref={topOfPageRef}></div>
       <NavDash />
-      <h2 className="font-semibold p-3 text-center text-5xl">Administración estudiantes</h2>
+      <h2 className="font-semibold p-3 text-center text-5xl">Administración de estudiantes</h2>
 
       {isLoading ? (
         <div className="flex justify-center align-middle">
-          <img src="src\assets\loading.gif" alt="Loading" />
+          <img src="src\assets\landing2.gif" alt="Loading" />
         </div>
       ) : (
         <div>
           <Container>
-            <InputGroup>
-              <Form.Control
-                placeholder="Recipient's username"
-                aria-label="Recipient's username with two button addons"
-              />
-              <Button variant="outline-primary" onClick={() => setIsAddingStudent(true)}>
-                Agregar estudiante
-              </Button>
-              <Button variant="outline-primary" onClick={() => document.getElementById("importExcelInput").click()}>
-              Agregar por excel
-              </Button>
-
-              </InputGroup>
+          <InputGroup>
+        <Form.Control
+         placeholder="Buscar por DNI"
+         aria-label="Recipient's username with two button addons"
+         value={searchValue}
+         onChange={(e) => setSearchValue(e.target.value)}
+         />
+         <br />
+         <Button variant="outline-primary"  onClick={() => { handleSearch(); setIsSearching(true);}}>
+            Buscar
+          </Button>
+          <Button variant="outline-danger" onClick={() => handleClear()} >
+            Limpiar
+          </Button>
+          <Button variant="outline-primary" onClick={() => { handleSearch(); setIsSearching(true);}} className="mr-6" >
+            Regresar
+          </Button>
+            <Button className="bg-blue-500 hover:bg-blue-700 active:bg-blue-800 hover:bg-green-700 active:bg-blue-800" onClick={() => setIsAddingStudent(true)}>
+           Agregar estudiante
+            </Button>
+             <Button className="bg-green-500 hover:bg-green-700 active:bg-green-800 hover:bg-green-700 active:bg-green-800" onClick={() => document.getElementById("importExcelInput").click()}>
+           Agregar por excel
+            </Button>
+            
+         </InputGroup>
+          
             <input
               type="file"
               id="importExcelInput"
@@ -228,7 +284,7 @@ export const Students = () => {
               onChange={handleImportFromExcel}
             />
           </Container>
-
+           
           {isAddingStudent && (
             <StudentForm
               student={newStudent}
@@ -236,7 +292,7 @@ export const Students = () => {
               onCancel={handleCancel}
             />
           )}
-
+           
           {isEditingStudent && selectedStudent && (
             <StudentForm
               student={newStudent}

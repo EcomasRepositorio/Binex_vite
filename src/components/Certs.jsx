@@ -4,6 +4,12 @@ import { Header } from "./navigations/Header";
 import Footer from "./navigations/Footer";
 import ListGroup from "react-bootstrap/ListGroup";
 import { Card, Container, Row, Col } from "react-bootstrap";
+import IconSvgA from '/src/assets/SVG/otorgado.svg';
+import IconSvgB from '/src/assets/SVG/creditos_horas.svg';
+import IconSvgC from '/src/assets/SVG/fecha_emision.svg';
+import IconSvgD from '/src/assets/SVG/nom_evento.svg';
+import IconSvgE from '/src/assets/SVG/organizadopor.svg';
+
 
 const Certs = () => {
   const [searchType, setSearchType] = useState("");
@@ -54,7 +60,7 @@ const Certs = () => {
           <span className="font-bold p-2  flex justify-center">
             Sin coincidencias.
           </span>
-          <img className="h-10" src="src/assets/IMG/duke_java.png"></img>
+          <img className="h-10" src="src/assets/IMG/sad.png"></img>
         </p>
       );
     }
@@ -100,47 +106,65 @@ const Certs = () => {
   };
 
   const renderFloatingWindow = (cert) => {
-    if (!cert) {
-      return null;
-    }
+    const isModalOpen = !!cert;
+    
 
     return (
-      <div className=" bg-white fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-50 shadow-lg rounded-lg p-4 w-3/4 md:max-w-md flex justify-center items-center">
-        <div>
-          <Container className="flex justify-end">
-            <button onClick={handleWindowClose}>
-              <span className="h-60" aria-hidden="true">
-                &times;
-              </span>
-            </button>
-          </Container>
-          <Container className="flex justify-center align-middle">        
-            <img className="h-24" src="src\assets\IMG\UNP.png"></img>
-         
-          </Container>
-          <Container>
-            <ListGroup>
-              <ListGroup.Item className="font-bold">
-                Organizado por:
-              </ListGroup.Item>
-              <ListGroup.Item>{cert.Instituciones}</ListGroup.Item>
-              <ListGroup.Item className="font-bold">Otorgado a:</ListGroup.Item>
-              <ListGroup.Item>
-                {cert.Nombre} <span> ({cert.Participacion})</span>
-              </ListGroup.Item>
-              <ListGroup.Item className="font-bold">
-                Nombre del evento:
-              </ListGroup.Item>
-              <ListGroup.Item>{cert.ActividadAcademica}</ListGroup.Item>
-              <ListGroup.Item className="font-bold">
-                Horas/Créditos:
-              </ListGroup.Item>
-              <ListGroup.Item>{cert.Horas}</ListGroup.Item>
-              <ListGroup.Item className="font-bold">Fecha:</ListGroup.Item>
-              <ListGroup.Item>{cert.Fecha}</ListGroup.Item>
-            </ListGroup>
-          </Container>
-        </div>
+      <div>
+        {/* Contenido del modal */}
+        {isModalOpen && (
+          <div className="fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center ">
+            <div className="prose bg-white p-12 md:max-w-md mx-auto rounded-lg">
+              <Container className="flex justify-end">
+                <button onClick={handleWindowClose}>
+                  <span className="h-60" aria-hidden="true">
+                    &times;
+                  </span>
+                </button>
+              </Container>
+              <Container className="flex items-center justify-center mt-[-90px]">
+                <img className="h-35 w-64 mt-1" src="src\assets\IMG\UNP.png" alt="UNP" />
+              </Container>
+              <Container>
+                <ListGroup className="">
+                
+                 <ListGroup.Item style={{height: '35px'}} className="bg-[#4D4D4D] font-bold text-white rounded ml-0 flex items-center mb-1">
+                  <img src={IconSvgE} alt="Icono" style={{ width: '70px' }} className="h-6 w-6 ml-2 mr-0" />
+                  <span className="ml-2">Organizado por:</span>
+                  </ListGroup.Item>
+                  <ListGroup.Item className="border-0">{cert.Instituciones}</ListGroup.Item>
+
+                  <ListGroup.Item style={{height: '35px'}} className="bg-[#4D4D4D] font-bold text-white rounded mr-0 flex items-center mb-2 ">
+                  <img src={IconSvgA} alt="Icono" style={{ width: '70px' }} className="h-6 w-6 ml-2 mr-0" />
+                  <span className="ml-2">Otorgado a:</span>
+                  </ListGroup.Item>
+                  <ListGroup.Item className="border-0">
+                    {cert.Nombre} <span> ({cert.Participacion})</span>
+                  </ListGroup.Item>
+
+                  <ListGroup.Item style={{height: '35px'}} className="bg-[#4D4D4D] font-bold text-white rounded mr-0 flex items-center mb-2 ">
+                  <img src={IconSvgD} alt="Icono" style={{ width: '70px' }} className="h-6 w-6 ml-1 mr-0" />
+                  <span className="ml-2">Nombre del evento:</span>
+                  </ListGroup.Item>
+                  <ListGroup.Item className="border-0">{cert.ActividadAcademica}</ListGroup.Item>
+
+                  <ListGroup.Item style={{height: '35px'}} className="bg-[#4D4D4D] font-bold text-white rounded mr-0 flex items-center mb-2">
+                  <img src={IconSvgB} alt="Icono" style={{ width: '70px' }} className="h-6 w-6 ml-2 mr-0" />
+                  <span className="ml-2">Créditos/Horas:</span>
+                  </ListGroup.Item>
+                  <ListGroup.Item className="border-0">{cert.Horas}</ListGroup.Item>
+
+                  <ListGroup.Item style={{height: '35px'}} className="bg-[#4D4D4D] font-bold text-white rounded mr-0 flex items-center mb-2">
+                  <img src={IconSvgC} alt="Icono" style={{ width: '70px' }} className="h-6 w-6 ml-2 mr-0" />
+                  <span className="ml-2">Fecha emisión:</span>
+                  </ListGroup.Item>
+                  <ListGroup.Item className="border-0">{cert.Fecha}</ListGroup.Item>
+                  
+                </ListGroup>
+              </Container>
+            </div>
+          </div>
+        )}
       </div>
     );
   };
