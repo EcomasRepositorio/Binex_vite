@@ -1,9 +1,7 @@
-const { apps } = require('some-module');
-
 module.exports = {
   apps: [
     {
-      name: 'mi_proyecto_vite',
+      name: 'frontend_vitee',
       script: 'npm',
       args: 'run dev',
       watch: true,
