@@ -1,19 +1,14 @@
-// vite.config.js
-import { defineConfig } from 'vite';
-import react from '@vitejs/plugin-react';
-
+import { defineConfig } from 'vite'
+import react from '@vitejs/plugin-react'
 
 export default defineConfig({
-  plugins: [
-    react(),
-    // Agrega el plugin de PostCSS
-  ],
+  plugins: [react()],
   server: {
-    port: 3500,
+    port: 3500
   },
   exclude: [
-    '**/.git/**',
-    '**/*.git',
-    '**/node_modules/**',
+    '**/.git/**',  // Excluir el directorio .git y sus subdirectorios
+    '**/*.git',    // Excluir cualquier archivo o directorio con el nombre .git
+    '**/node_modules/**',  // Excluir el directorio node_modules y sus subdirectorios
   ],
-});
+})
