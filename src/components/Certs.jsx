@@ -203,7 +203,7 @@ const Certs = () => {
               id="selection_search_icon_ecomas"
             >
               <button
-                className="btn btn-primary m-2 text-center "
+                className="btn m-2 text-center bg-blue-500 text-white hover:bg-blue-700" 
                 onClick={() => handleSearch("DNI")}
               >
                 <span className="flex justify-center">
@@ -215,7 +215,7 @@ const Certs = () => {
                 </span>
               </button>
               <button
-                className="btn btn-primary m-2"
+                className="btn m-2 text-center bg-teal-500 text-white hover:bg-teal-700"
                 onClick={() => handleSearch("codigo")}
               >
                 <span className="flex justify-center">
@@ -227,7 +227,7 @@ const Certs = () => {
                 </span>
               </button>
               <button
-                className="btn btn-primary m-2 "
+                className="btn m-2 text-center bg-blue-500 text-white hover:bg-blue-700"  
                 onClick={() => handleSearch("nombre")}
               >
                 <span className="flex justify-center">
