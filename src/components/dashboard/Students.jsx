@@ -228,7 +228,7 @@ export const Students = () => {
   
   
 
-  if (!isAuthenticated || (isAuthenticated && user.email !== 'maycolmedina366@gmail.com')) {
+  if (!isAuthenticated || (isAuthenticated && user.email !== 'binexeducacion@gmail.com')) {
     return (
       <div className="flex justify-center align-middle text-2xl p-4">
         <h1 className="uppercase font-bold p-1">No tienes acceso a esta página.</h1>
