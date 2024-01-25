@@ -22,7 +22,7 @@ const Certs = () => {
   };
 
   const handleInputChange = (event) => {
-    const inputValue = event.target.value.trim().toLowerCase(); // Convertir a minúsculas y quitar espacios
+    const inputValue = event.target.value; // Convertir a minúsculas y quitar espacios
     setSearchValue(inputValue);
   };
 
@@ -41,10 +41,14 @@ const Certs = () => {
       filteredData = data.results.filter((cert) => cert.DNI == searchValue);
     } else if (searchType == "nombre") {
       // Filtrar solo cuando la búsqueda coincida con el nombre completo
+
+
       filteredData = data.results.filter((cert) => {
         const nombre = cert.Nombre || "";
-        return nombre.toLowerCase() == searchValue;
+        return nombre.toLowerCase().includes(searchValue.toLowerCase());
       });
+
+
     } else if (searchType == "codigo") {
       const foundCert = data.results.find(
         (cert) => cert.Codigo == searchValue
