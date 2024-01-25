@@ -118,7 +118,7 @@ const Certs = () => {
         {/* Contenido del modal */}
         {isModalOpen && (
           <div className="fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center ">
-            <div className="prose bg-white p-12 md:max-w-md mx-auto rounded-lg">
+            <div className="prose bg-white p-12  mx-full rounded-lg" style={{width:'520px'}} >
               <Container className="flex justify-end">
                 <button onClick={handleWindowClose}>
                   <span className="h-60" aria-hidden="true">
@@ -126,43 +126,46 @@ const Certs = () => {
                   </span>
                 </button>
               </Container>
-              <Container className="flex items-center justify-center mt-[-90px]">
+              <Container className="flex items-center justify-center mt-[-90px] ">
                 <img className="h-35 w-64 mt-1" src="src\assets\IMG\UNP.png" alt="UNP" />
               </Container>
               <Container>
                 <ListGroup className="">
                 
-                 <ListGroup.Item style={{height: '35px'}} className="bg-[#4D4D4D] font-bold text-white rounded ml-0 flex items-center mb-1">
-                  <img src={IconSvgE} alt="Icono" style={{ width: '70px' }} className="h-6 w-6 ml-2 mr-0" />
-                  <span className="ml-2">Organizado por:</span>
+                 <ListGroup.Item style={{height: '35px', width:'280px', marginLeft:'60px'}} className="bg-[#4D4D4D] font-bold text-white rounded flex items-center mb-1">
+                  <img src={IconSvgE} alt="Icono" style={{ width: '20px' }} className="h-5 w-5 ml-2 mr-0" />
+                  <span className="flex items-center justify-center"style={{width:'205px'}}>Organizado por:</span>
                   </ListGroup.Item>
-                  <ListGroup.Item className="border-0">{cert.Instituciones}</ListGroup.Item>
+                  <ListGroup.Item className="border-0  "style={{width:'440px',marginLeft:'-20px'}} >{cert.Instituciones}</ListGroup.Item>
 
-                  <ListGroup.Item style={{height: '35px'}} className="bg-[#4D4D4D] font-bold text-white rounded mr-0 flex items-center mb-2 ">
-                  <img src={IconSvgA} alt="Icono" style={{ width: '70px' }} className="h-6 w-6 ml-2 mr-0" />
-                  <span className="ml-2">Otorgado a:</span>
+                  <ListGroup.Item style={{height: '35px', width:'280px', marginLeft:'60px'}} className="bg-[#4D4D4D] font-bold text-white rounded mr-0 flex items-center mb-2 ml-12">
+                  <img src={IconSvgA} alt="Icono" style={{ width: '20px' }} className="h-5 w-5 ml-2 mr-0" />
+                  <span className="flex items-center justify-center"style={{width:'210px'}}>Otorgado a:</span>
                   </ListGroup.Item>
-                  <ListGroup.Item className="border-0">
-                    {cert.Nombre} <span> ({cert.Participacion})</span>
+                  <ListGroup.Item className="border-0  ">
+                  <ul>
+                  <li> {cert.Nombre}</li> 
+                  <li> ({cert.Participacion})</li>
+                  </ul>
                   </ListGroup.Item>
 
-                  <ListGroup.Item style={{height: '35px'}} className="bg-[#4D4D4D] font-bold text-white rounded mr-0 flex items-center mb-2 ">
-                  <img src={IconSvgD} alt="Icono" style={{ width: '70px' }} className="h-6 w-6 ml-1 mr-0" />
-                  <span className="ml-2">Nombre del evento:</span>
+                  <ListGroup.Item style={{height: '35px', width:'280px', marginLeft:'60px'}} className="bg-[#4D4D4D] font-bold text-white rounded mr-0 flex items-center mb-2 ml-12 ">
+                  <img src={IconSvgD} alt="Icono" style={{ width: '20px' }} className="h-5 w-5 ml-1 mr-0" />
+                  <span className="flex items-center justify-center ml-05"style={{width:'210px'}}>Nombre del evento:</span>
                   </ListGroup.Item>
-                  <ListGroup.Item className="border-0">{cert.ActividadAcademica}</ListGroup.Item>
+                  <ListGroup.Item className="border-0 ">{cert.ActividadAcademica}</ListGroup.Item>
 
-                  <ListGroup.Item style={{height: '35px'}} className="bg-[#4D4D4D] font-bold text-white rounded mr-0 flex items-center mb-2">
-                  <img src={IconSvgB} alt="Icono" style={{ width: '70px' }} className="h-6 w-6 ml-2 mr-0" />
-                  <span className="ml-2">Créditos/Horas:</span>
+                  <ListGroup.Item style={{height: '35px', width:'280px', marginLeft:'60px'}} className="bg-[#4D4D4D] font-bold text-white rounded mr-0 flex items-center mb-2 ml-12">
+                  <img src={IconSvgB} alt="Icono" style={{ width: '20px' }} className="h-5 w-5 ml-2 mr-0" />
+                  <span className="flex items-center justify-center ml-05"style={{width:'205px'}}>Créditos/Horas:</span>
                   </ListGroup.Item>
                   <ListGroup.Item className="border-0">{cert.Horas}</ListGroup.Item>
 
-                  <ListGroup.Item style={{height: '35px'}} className="bg-[#4D4D4D] font-bold text-white rounded mr-0 flex items-center mb-2">
-                  <img src={IconSvgC} alt="Icono" style={{ width: '70px' }} className="h-6 w-6 ml-2 mr-0" />
-                  <span className="ml-2">Fecha emisión:</span>
+                  <ListGroup.Item style={{height: '35px', width:'280px', marginLeft:'60px'}} className="bg-[#4D4D4D] font-bold text-white rounded mr-0 flex items-center mb-2 ml-12">
+                  <img src={IconSvgC} alt="Icono" style={{ width: '20px' }} className="h-5 w-5 ml-2 mr-0" />
+                  <span className="flex items-center justify-center ml-05" style={{width:'210px'}}>Fecha emisión:</span>
                   </ListGroup.Item>
-                  <ListGroup.Item className="border-0">{cert.Fecha}</ListGroup.Item>
+                  <ListGroup.Item className="border-0 ">{cert.Fecha}</ListGroup.Item>
                   
                 </ListGroup>
               </Container>
@@ -204,7 +207,7 @@ const Certs = () => {
               id="selection_search_icon_ecomas"
             >
               <button
-                className="btn btn-primary m-2 text-center "
+                className="btn m-2 text-center bg-blue-500 text-white hover:bg-blue-700" 
                 onClick={() => handleSearch("DNI")}
               >
                 <span className="flex justify-center">
@@ -216,7 +219,7 @@ const Certs = () => {
                 </span>
               </button>
               <button
-                className="btn btn-primary m-2"
+                className="btn m-2 text-center bg-teal-500 text-white hover:bg-teal-700"
                 onClick={() => handleSearch("codigo")}
               >
                 <span className="flex justify-center">
@@ -228,7 +231,7 @@ const Certs = () => {
                 </span>
               </button>
               <button
-                className="btn btn-primary m-2 "
+                className="btn m-2 text-center bg-blue-500 text-white hover:bg-blue-700"  
                 onClick={() => handleSearch("nombre")}
               >
                 <span className="flex justify-center">

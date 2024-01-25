@@ -8,10 +8,9 @@ import Blog from "./components/Blog";
 import Curso from "./components/Curso";
 import Nosotros from "./components/Nosotros";
 import Certs from "./components/Certs";
-import Preguntas from "./components/Preguntas";
 import Eventos from "./components/Eventos";
-import Contactanos from "./components/Contactanos";
 import Forms from "./components/dashboard/Forms";
+
 
 function App() {
   const [count, setCount] = useState(0);
@@ -27,12 +26,11 @@ function App() {
             <Route path="/blog" element={<Blog />}></Route>
             <Route path="/Curso" element={<Curso />}></Route>
             <Route path="/Nosotros" element={<Nosotros />}></Route>
-            <Route path="/Eventos" element={<Eventos />}></Route>
-            <Route path="/Preguntas" element={<Preguntas />}></Route>
-            <Route path="/contactanos" element={<Contactanos />}></Route>
+            <Route path="/Eventos" element={<Eventos />}></Route>         
             <Route path="/Forms" element={<Forms />}></Route>
             <Route path="/Eventos" element={<Eventos />} />
             <Route path="/Eventos/:formId" element={<Eventos />} />
+           
           </Routes>
         </div>
       </Auth0ProviderWithHistory>
