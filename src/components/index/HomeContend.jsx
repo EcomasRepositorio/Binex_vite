@@ -2,6 +2,7 @@ import React from "react";
 import Cursos from "./Cursos";
 import Eventos from "./Eventos";
 import Testimonios from "./Testimonios";
+import Ecomas from "./Ecomas";
 import { Col, Container, Row } from "react-bootstrap";
 import Card from "react-bootstrap/Card";
 import Carousel from "react-bootstrap/Carousel";
@@ -12,16 +13,16 @@ const HomeContend = () => {
     <>
       <Carousel className="animate__animated animate__backInLeft">
         <Carousel.Item>
-        <img src="src\assets\IMG\banner.webp" alt="Banner 1" width="100%" height="auto" />
+          <img src="src\assets\IMG\banner.webp" />
         </Carousel.Item>
         <Carousel.Item>
-        <img src="src\assets\IMG\banner2.webp" alt="Banner 2" width="100%" height="auto" />
+          <img src="src\assets\IMG\banner2.webp" />
         </Carousel.Item>
         <Carousel.Item>
-        <img src="src\assets\IMG\banner3.webp" alt="Banner 3" width="100%" height="auto" />
+          <img src="src\assets\IMG\banner3.webp" />
         </Carousel.Item>
         <Carousel.Item>
-        <img src="src\assets\IMG\banner4.webp" alt="Banner 1" width="100%" height="auto" />
+          <img src="src\assets\IMG\banner4.webp" />
         </Carousel.Item>
       </Carousel>
 
@@ -107,7 +108,7 @@ const HomeContend = () => {
         </Card>
 
         <div className="flex items-center justify-center sm:justify-end">
-        <img className="w-65 h-auto object-cover border border-solid border-blue-500 border-0 rounded-5 hover:-translate-x-4 transition delay-150 duration-500" src="src/assets/IMG/picture2.webp" alt="Mortarboard" />
+        <img className="w-65 h-auto object-cover border border-solid border-blue-500 border-0 rounded-5 hover:-translate-x-4 transition delay-150 duration-500" src="src/assets/IMG/grupo.webp" alt="Mortarboard" />
         </div>
       </Container>
     </div>
@@ -116,7 +117,7 @@ const HomeContend = () => {
     <div style={{ backgroundImage: "linear-gradient(to right, #ffffff, #ffffff)" }} className="p-5">
       <Container className="my-3 grid grid-cols-1 sm:grid-cols-2 gap-5 justify-items-center text-center">
         <div className="flex items-center justify-center sm:justify-end">
-        <img className="w-full h-full object-cover border border-solid border-blue-500 border-0 rounded-5 hover:-translate-x-4 transition delay-150 duration-500" src="src/assets/IMG/picture.webp" alt="Mortarboard" />
+        <img className="w-full h-full object-cover border border-solid border-blue-500 border-0 rounded-5 hover:-translate-x-4 transition delay-150 duration-500" src="src/assets/IMG/openW2.webp" alt="Mortarboard" />
         </div>
         <Card className="animate-slide-in-left min-w-[450px] p-5 rounded-4xl w-7/12 shadow-4xl border-none ">
           <Card.Body>

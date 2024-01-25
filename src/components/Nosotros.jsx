@@ -1,8 +1,6 @@
 import React, { useState } from "react";
-import  Header from './navigations/Header'
+import { Header } from './navigations/Header'
 import Footer from './navigations/Footer'
-
-
 
 const Nosotros = () => {
 	return (
@@ -20,9 +18,7 @@ const Nosotros = () => {
 							a nuestros alumnos adquirir habilidades cruciales para sobresalir en la industria y en una amplia variedad de sectores económicos. Como pilar fundamental
 							de nuestro compromiso, nos esforzamos por brindar una formación de calidad que empodere a nuestros estudiantes y los prepare para los desafíos cambiantes del mundo laboral.</p>
 					</div>
-					
 				</div>
-				
 				<div className="container">
 					<ul id="ul_nosotros_target" className="text-center row p-2 mx-4 shadow border">
 						<li className="nav-link col-sm  py-5">Nosotros</li>
@@ -36,7 +32,6 @@ const Nosotros = () => {
 				<div></div>
 				<div></div>
 			</div>
-			
 			<Footer />
 		</div>
 	)

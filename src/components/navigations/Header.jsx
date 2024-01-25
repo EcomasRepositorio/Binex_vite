@@ -60,7 +60,6 @@ export const Header = () => {
                 id={`offcanvasNavbarLabel-expand-${expand}`}
               ></Offcanvas.Title>
             </Offcanvas.Header>
-            
             <Offcanvas.Body>
               <Nav className="justify-content-start flex-grow-1 pe-3 gap-2">
                 <Nav.Link>

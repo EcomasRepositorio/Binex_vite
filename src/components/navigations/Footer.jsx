@@ -49,7 +49,7 @@ const Footer = () => {
                 alt="correo"
                 className="w-7 h-10 mr-1"
                  />
-                  <span>921814045</span>
+                  <span>+51 921814045</span>
                 </li>
 
                 <li className="flex items-center">
